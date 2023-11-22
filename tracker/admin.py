@@ -5,10 +5,11 @@ from .models import User, MealPlan, NutritionTracker, Food
 
 @admin.register(User)
 class UserAdmin(UserAdmin):
-    list_display = UserAdmin.list_display + ("weight", "height")
+    list_display = UserAdmin.list_display + ("weight", "height", "age")
     fieldsets = UserAdmin.fieldsets + (
         (("Additional info", {"fields": ("weight", "height", "age", "fitness_goals")}),)
     )
+    list_filter = ("age",)
     add_fieldsets = UserAdmin.add_fieldsets + (
         (
             (
