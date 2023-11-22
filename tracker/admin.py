@@ -27,10 +27,12 @@ class UserAdmin(UserAdmin):
         )
     )
 
+
 @admin.register(MealPlan)
 class MealPlanAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     list_filter = ("foods",)
+
 
 @admin.register(Food)
 class FoodAdmin(admin.ModelAdmin):
@@ -41,5 +43,6 @@ class FoodAdmin(admin.ModelAdmin):
         "fats",
     )
     list_filter = ("meal_plans",)
+
 
 admin.site.register(NutritionTracker)
