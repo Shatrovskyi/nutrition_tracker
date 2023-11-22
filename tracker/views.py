@@ -1,13 +1,17 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-
-from .forms import UserMainCreationForm, UserMainUsernameSearchForm, UserMainUpdateWeightForm, FoodNameSearchForm, \
-    MealPlanTitleSearchForm, MealPlanForm
 from .models import User, MealPlan, NutritionTracker, Food
+from .forms import (
+    UserMainCreationForm,
+    UserMainUsernameSearchForm,
+    UserMainUpdateWeightForm,
+    FoodNameSearchForm,
+    MealPlanTitleSearchForm,
+    MealPlanForm
+)
 
 
 @login_required
@@ -54,6 +58,10 @@ class MealPlanListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
+class MealPlanDetailView(LoginRequiredMixin, generic.DetailView):
+    model = MealPlan
+
+
 class MealPlanCreateView(LoginRequiredMixin, generic.CreateView):
     model = MealPlan
     form_class = MealPlanForm
@@ -78,6 +86,12 @@ class NutritionTrackerListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return NutritionTracker.objects.filter(user=self.request.user).order_by("-date")
+
+
+class NutritionTrackerCreateView(LoginRequiredMixin, generic.CreateView):
+    model = NutritionTracker
+    fields = "__all__"
+    success_url = reverse_lazy("tracker:nutrition-tracker-list")
 
 
 class FoodListView(LoginRequiredMixin, generic.ListView):
