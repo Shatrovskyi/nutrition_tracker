@@ -27,7 +27,7 @@ class User(AbstractUser):
 
 
 class MealPlan(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="meal_plans")
+    users = models.ManyToManyField(User, related_name="meal_plans")
     foods = models.ManyToManyField(Food, related_name="meal_plans")
     title = models.CharField(max_length=255)
     description = models.TextField()
