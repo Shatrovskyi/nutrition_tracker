@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ user.username }}</h1>
+  <p>Email: {{ user.email }}</p>
+  <p>Weight: {{ user.weight }}</p>
+  <p>Age: {{ user.age }}</p>
+
+  <a href="{% url 'tracker:user-update' user.pk %}">Update</a>
+  <a href="{% url 'tracker:user-weight-update' user.pk %}">Update Weight</a>
+  <a href="{% url 'tracker:user-delete' user.pk %}">Delete</a>
+{% endblock %}

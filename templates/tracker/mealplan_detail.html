@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ mealplan.title }}</h1>
+  <p>Description: {{ mealplan.description }}</p>
+
+  <a href="{% url 'tracker:meal-plan-update' pk=mealplan.id %}">Update</a>
+  <a href="{% url 'tracker:meal-plan-delete' pk=mealplan.id%}">Delete</a>
+{% endblock %}

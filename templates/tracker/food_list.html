@@ -4,6 +4,7 @@
 {% block content %}
   <h1>
     Food List
+    <a href="{% url 'tracker:food-create' %}">+</a>
   </h1>
 
   {% if food_list %}
@@ -15,6 +16,8 @@
         <th>Fats</th>
         <th>Carbs</th>
         <th>Protein</th>
+        <th>Update</th>
+        <th>Delete</th>
       </tr>
 
       {% for food in food_list %}
@@ -36,6 +39,12 @@
           </td>
           <td>
               {{ food.protein }}
+          </td>
+          <td>
+            <a href="{% url 'tracker:food-update' food.pk %}">Update</a>
+          </td>
+          <td>
+            <a href="{% url 'tracker:food-delete' food.pk %}">Delete</a>
           </td>
         </tr>
       {% endfor %}

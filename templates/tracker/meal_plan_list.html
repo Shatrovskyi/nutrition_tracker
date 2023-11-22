@@ -1,20 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Meal Plans</h2>
+  <h2>
+    Meal Plans
+    <a href="{% url 'tracker:meal-plan-create' %}">+</a>
+  </h2>
+
   <ul>
     {% for meal_plan in meal_plan_list %}
       <li>
-        <strong>{{ meal_plan.title }}</strong>
+        <strong><a href="{% url 'tracker:meal-plan-detail'  pk=meal_plan.id%}">{{ meal_plan.title }}</a></strong>
         <br>
         Description: {{ meal_plan.description }}
         <br>
-        Created by: {{ meal_plan.user.get_full_name }}
+        Created by: {{ meal_plan.creator.username }}
         <br>
-        Foods:
+        <h5>Foods:</h5>
         <ul>
           {% for food in meal_plan.foods.all %}
             <li>{{ food.name }}</li>
+          {% endfor %}
+        </ul>
+        <h5>Users:</h5>
+        <ul>
+          {% for user in meal_plan.users.all %}
+            <li>{{ user.username }}</li>
           {% endfor %}
         </ul>
       </li>

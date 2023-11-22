@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Nutrition Tracker</h2>
+  <h2>
+    Nutrition Tracker
+    <a href="{% url 'tracker:nutrition-tracker-create' %}">+</a>
+  </h2>
   <ul>
     {% for nutrition_tracker in nutritiontracker_list %}
       <li>

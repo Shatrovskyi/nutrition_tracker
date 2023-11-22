@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete Meal plan?</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Yes" class="btn btn-danger">
+    <button class="btn btn-primary"><a href="{% url 'tracker:meal-plan-list' %}" class="text-white">Cancel</a></button>
+  </form>
+{% endblock %}
