@@ -1,14 +1,16 @@
 from django import forms
-from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
-from django.core.exceptions import ValidationError
 
-from tracker.models import User, MealPlan, Food
+from tracker.models import User, MealPlan, Food, NutritionTracker
 
 
 class MealPlanForm(forms.ModelForm):
     foods = forms.ModelMultipleChoiceField(
         queryset=Food.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+    )
+    users = forms.ModelMultipleChoiceField(
+        queryset=User.objects.all(),
         widget=forms.CheckboxSelectMultiple,
     )
 
