@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Nutrition Tracker Journal</h1>
+    <p>Welcome to Nutrition Tracker Ever!</p>
+    <p>We will help you to loss weight or stay fit following our Meal plan</p>
+    <p>Nutrition Tracker Journal has the following record counts:</p>
+    <ul>
+        <li><strong>Meal Plans:</strong> {{ num_meal_plans }}</li>
+        <li><strong>Users:</strong> {{ num_users }}</li>
+        <li><strong>Food:</strong> {{ num_foods }}</li>
+    </ul>
+
+    <p>You have visited this page
+        {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+
+{% endblock %}

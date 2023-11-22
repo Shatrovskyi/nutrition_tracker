@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Food List
+  </h1>
+
+  {% if food_list %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Fats</th>
+        <th>Carbs</th>
+        <th>Protein</th>
+      </tr>
+
+      {% for food in food_list %}
+        <tr>
+          <td>
+              {{ food.id }}
+          </td>
+          <td>
+              {{ food.name }}
+          </td>
+          <td>
+              {{ food.calories }}
+          </td>
+          <td>
+              {{ food.fats }}
+          </td>
+          <td>
+              {{ food.carbs }}
+          </td>
+          <td>
+              {{ food.protein }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  {% else %}
+      <p>There is no food.</p>
+  {% endif %}
+{% endblock %}

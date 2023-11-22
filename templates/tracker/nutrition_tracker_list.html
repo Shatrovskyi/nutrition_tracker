@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Nutrition Tracker</h2>
+  <ul>
+    {% for nutrition_tracker in nutritiontracker_list %}
+      <li>
+        <strong>{{ nutrition_tracker.food.name }}</strong> - {{ nutrition_tracker.serving_size }} servings
+        <br>
+        Date: {{ nutrition_tracker.date|date:"F d, Y H:i" }}
+        <br>
+        Meal Type: {{ nutrition_tracker.meal_type }}
+        <br>
+        User Notes: {{ nutrition_tracker.user_notes }}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if nutritiontracker_list.has_other_pages %}
+    {% block pagination %}
+        {% include "includes/pagination.html" %}
+    {% endblock %}
+  {% endif %}
+{% endblock %}

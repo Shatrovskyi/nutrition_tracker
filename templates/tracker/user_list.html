@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    User List
+  </h1>
+
+  {% if user_list %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Age</th>
+      </tr>
+
+      {% for user in user_list %}
+        <tr>
+          <td>
+              {{ user.id }}
+          </td>
+          <td>
+              {{ user.username }}
+          </td>
+          <td>
+              {{ user.weight }}
+          </td>
+          <td>
+              {{ user.height }}
+          </td>
+          <td>
+              {{ user.age }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  {% else %}
+      <p>There is no food.</p>
+  {% endif %}
+{% endblock %}
