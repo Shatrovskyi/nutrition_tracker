@@ -15,26 +15,30 @@
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-2">
-
-            {% block sidebar %}
-                {% include "includes/nav-menu.html" %}
-            {% endblock %}
-
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          {% block nav-menu %}
+            {% include "includes/nav-menu.html" %}
+          {% endblock %}
         </div>
-        <div class="col-sm-10 ">
 
-            {% block content %}{% endblock %}
+        <div class="row">
+            <div class="col-sm-12">
 
-            {% block pagination %}
-                {% include "includes/pagination.html" %}
-            {% endblock %}
+                {% block content %}{% endblock %}
 
+                {% block pagination %}
+                    {% include "includes/pagination.html" %}
+                {% endblock %}
+
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Bootstrap JS and dependencies (add them at the end of the body for better performance) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-7dQcGBO4BOkCDNQeMG+H8P9BTUHd6p+Xl54PXNT2AZ3yDV8nhomJSBt1YTBhKwK5" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyYqfQszVb8ZlN/lLkg1sa8OzFpV5tSIA" crossorigin="anonymous"></script>
 </body>
 
 </html>
