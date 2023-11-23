@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
-from tracker.models import User, MealPlan, Food, NutritionTracker
+from tracker.models import User, MealPlan, Food
 
 
 class MealPlanForm(forms.ModelForm):
