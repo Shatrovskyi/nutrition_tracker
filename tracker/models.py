@@ -52,3 +52,6 @@ class NutritionTracker(models.Model):
     serving_size = models.IntegerField()
     meal_type = models.CharField(max_length=255)
     user_notes = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.user.username} ({self.meal_type}{self.food.name})"
