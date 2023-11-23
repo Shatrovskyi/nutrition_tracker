@@ -27,90 +27,89 @@ from .views import (
 urlpatterns = [
     path("", index, name="index"),
     path("users/", UserListView.as_view(), name="user-list"),
-    path("meal_plans/", MealPlanListView.as_view(), name="meal-plan-list"),
+    path("meal-plans/", MealPlanListView.as_view(), name="meal-plan-list"),
     path("foods/", FoodListView.as_view(), name="food-list"),
     path(
-        "nutrition_trackers/",
+        "nutrition_tracker/",
         NutritionTrackerListView.as_view(),
         name="nutrition-tracker-list"
     ),
     path(
-        "meal_plans/create/",
+        "meal-plan/create/",
         MealPlanCreateView.as_view(),
         name="meal-plan-create"
     ),
     path(
-        "meal_plans/<int:pk>/",
+        "meal-plan/<int:pk>/",
         MealPlanDetailView.as_view(),
         name="meal-plan-detail"
 
     ),
     path(
-        "meal_plans/<int:pk>/update/",
+        "meal-plan/<int:pk>/update/",
         MealPlanUpdateView.as_view(),
         name="meal-plan-update"
     ),
     path(
-        "meal_plans/<int:pk>/delete/",
+        "meal-plan/<int:pk>/delete/",
         MealPlanDeleteView.as_view(),
         name="meal-plan-delete"
     ),
     path(
-        "foods/create/",
+        "food/create/",
         FoodCreateView.as_view(),
         name="food-create"
     ),
     path(
-        "foods/<int:pk>/update/",
+        "food/<int:pk>/update/",
         FoodUpdateView.as_view(),
         name="food-update"
     ),
     path(
-        "foods/<int:pk>/delete/",
+        "food/<int:pk>/delete/",
         FoodDeleteView.as_view(),
         name="food-delete"
     ),
     path(
-        "users/create/",
+        "user/create/",
         UserCreateView.as_view(),
         name="user-create"
     ),
     path(
-        "users/<int:pk>/update/",
+        "user/<int:pk>/update/",
         UserUpdateView.as_view(),
         name="user-update"
     ),
     path(
-        "users/<int:pk>/delete/",
+        "user/<int:pk>/delete/",
         UserDeleteView.as_view(),
         name="user-delete"
     ),
     path(
-        "users/<int:pk>/",
+        "user/<int:pk>/",
         UserDetailView.as_view(),
         name="user-detail"
     ),
     path(
-        "users/<int:pk>/update/weight/",
+        "user/<int:pk>/update/weight/",
         UserWeightUpdateView.as_view(),
         name="user-weight-update"
     ),
     path(
-        "nutrition_trackers/create/",
+        "nutrition_tracker/create/",
         NutritionTrackerCreateView.as_view(),
         name="nutrition-tracker-create"
     ),
     path(
-        "meal_plans/<int:pk>/add-user",
+        "meal-plan/<int:pk>/add-user/",
         meal_plan_add_user,
         name="meal-plan-add-user"
     ),
     path(
-        "meal_plans/<int:pk>/delete-user",
+        "meal-plan/<int:pk>/delete-user/",
         meal_plan_delete_user,
         name="meal-plan-delete-user"
-    )
-
+    ),
 ]
 
 app_name = "tracker"
