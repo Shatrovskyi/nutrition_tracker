@@ -1,0 +1,52 @@
+header{
+    background-color: blanchedalmond;
+    font-size: 21px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+.diver{
+    margin-bottom: 40px;
+}
+
+.footer {
+    background-color: #a5cfff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.log-font{
+    color: darkslategray;
+}
+
+.home-page-items{
+    font-size: 24px;
+}
+
+.text-corale {
+    color: coral;
+  }
+
+.list-group-item {
+  border-color: coral;
+  background-color: blanchedalmond;
+  color: #676767;
+}
+
+
+.list-group-item_tracker{
+  border-color: #f6ffd4;
+  background-color: #fff2d4;
+  color: #983737;
+}
+
+a{
+    margin-right: 8px;
+}
