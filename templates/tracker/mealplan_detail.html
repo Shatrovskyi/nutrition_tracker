@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>{{ mealplan.title }}</h1>
-  <p>Description: {{ mealplan.description }}</p>
+  <div class="container mt-4">
+    <div class="card list-group-item" style="font-size: 21px;">
+      <div class="card-body">
+        <h1 class="card-text">{{ mealplan.title }}</h1>
+        <p class="card-text" >Description: {{ mealplan.description }}</p>
+        <p class="card-text">Created by: <h5 class="text-corale">{{ mealplan.creator.username }}</h5></p>
+      </div>
+    </div>
 
-  <a href="{% url 'tracker:meal-plan-update' pk=mealplan.id %}">Update</a>
-  <a href="{% url 'tracker:meal-plan-delete' pk=mealplan.id%}">Delete</a>
+    <div class="d-flex mt-3">
+      <a href="{% url 'tracker:meal-plan-update' pk=mealplan.id %}" class="btn btn-success me-2">Update</a>
+      <a href="{% url 'tracker:meal-plan-delete' pk=mealplan.id %}" class="btn btn-danger">Delete</a>
+      <a href="{% url 'tracker:meal-plan-list' %}" class="btn btn-secondary ms-auto">Back to List</a>
+    </div>
+  </div>
 {% endblock %}
+

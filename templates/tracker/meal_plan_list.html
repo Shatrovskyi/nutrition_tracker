@@ -1,33 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>
-    Meal Plans
-    <a href="{% url 'tracker:meal-plan-create' %}">+</a>
-  </h2>
+  <div class="container mt-4">
+    <h2 class="text-corale text-center">
+      Meal Plans
+      <a href="{% url 'tracker:meal-plan-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+    </h2>
 
-  <ul>
-    {% for meal_plan in meal_plan_list %}
-      <li>
-        <strong><a href="{% url 'tracker:meal-plan-detail'  pk=meal_plan.id%}">{{ meal_plan.title }}</a></strong>
-        <br>
-        Description: {{ meal_plan.description }}
-        <br>
-        Created by: {{ meal_plan.creator.username }}
-        <br>
-        <h5>Foods:</h5>
-        <ul>
-          {% for food in meal_plan.foods.all %}
-            <li>{{ food.name }}</li>
-          {% endfor %}
-        </ul>
-        <h5>Users:</h5>
-        <ul>
-          {% for user in meal_plan.users.all %}
-            <li>{{ user.username }}</li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-  </ul>
+    {% if meal_plan_list %}
+      <div class="list-group">
+        {% for meal_plan in meal_plan_list %}
+          <div class="list-group-item text-secondary">
+            <strong><a href="{% url 'tracker:meal-plan-detail' pk=meal_plan.id %}" class="text-corale text-decoration-none" style="font-size: 26px;">{{ meal_plan.title }}</a></strong>
+            <p class="mb-2 mt-3" style="font-size: 20px;">Description: {{ meal_plan.description }}</p>
+            <p class="">Created by: <h5 class="text-corale">{{ meal_plan.creator.username }}</h5></p>
+
+            <h5>Foods:</h5>
+            <ul>
+              {% for food in meal_plan.foods.all %}
+                <li>{{ food.name }}</li>
+              {% endfor %}
+            </ul>
+
+            <h5>Users:</h5>
+            <ul>
+              {% for user in meal_plan.users.all %}
+                <li>{{ user.username }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="alert alert-info">There are no meal plans.</p>
+    {% endif %}
+  </div>
 {% endblock %}
+

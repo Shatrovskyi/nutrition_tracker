@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ user.username }}</h1>
-  <p>Email: {{ user.email }}</p>
-  <p>Weight: {{ user.weight }}</p>
-  <p>Age: {{ user.age }}</p>
+  <div class="container mt-4 ">
+    <h1 class="mb-4">{{ user.username }}</h1>
+    <div class="card list-group-item" style="font-size: 21px;">
+      <div class="card-body">
+        <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="card-text"><strong>First name:</strong> {{ user.first_name }}</p>
+        <p class="card-text"><strong>Last Name:</strong> {{ user.last_name }}</p>
+        <p class="card-text"><strong>Height:</strong> {{ user.height }}</p>
+        <p class="card-text"><strong>Weight:</strong> {{ user.weight }}</p>
+        <p class="card-text"><strong>Age:</strong> {{ user.age }}</p>
+        <p class="card-text"><strong>Fitness Goal:</strong> {{ user.fitness_goals }}</p>
+      </div>
+    </div>
 
-  <a href="{% url 'tracker:user-update' user.pk %}">Update</a>
-  <a href="{% url 'tracker:user-weight-update' user.pk %}">Update Weight</a>
-  <a href="{% url 'tracker:user-delete' user.pk %}">Delete</a>
+    <div class="mt-4">
+      <a href="{% url 'tracker:user-update' user.pk %}" class="btn btn-primary me-2">Update</a>
+      <a href="{% url 'tracker:user-weight-update' user.pk %}" class="btn btn-warning me-2">Update Weight</a>
+      <a href="{% url 'tracker:user-delete' user.pk %}" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
 {% endblock %}
+

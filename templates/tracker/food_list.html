@@ -2,55 +2,47 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
-    Food List
-    <a href="{% url 'tracker:food-create' %}">+</a>
-  </h1>
+  <div class="container mt-4">
+    <h1 class="mb-4 text-center">
+      Food List
+      <a href="{% url 'tracker:food-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+    </h1>
 
-  {% if food_list %}
-    <table class="table">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Calories</th>
-        <th>Fats</th>
-        <th>Carbs</th>
-        <th>Protein</th>
-        <th>Update</th>
-        <th>Delete</th>
-      </tr>
-
-      {% for food in food_list %}
-        <tr>
-          <td>
-              {{ food.id }}
-          </td>
-          <td>
-              {{ food.name }}
-          </td>
-          <td>
-              {{ food.calories }}
-          </td>
-          <td>
-              {{ food.fats }}
-          </td>
-          <td>
-              {{ food.carbs }}
-          </td>
-          <td>
-              {{ food.protein }}
-          </td>
-          <td>
-            <a href="{% url 'tracker:food-update' food.pk %}">Update</a>
-          </td>
-          <td>
-            <a href="{% url 'tracker:food-delete' food.pk %}">Delete</a>
-          </td>
-        </tr>
-      {% endfor %}
-    </table>
-
-  {% else %}
-      <p>There is no food.</p>
-  {% endif %}
+    {% if food_list %}
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Calories</th>
+            <th>Fats</th>
+            <th>Carbs</th>
+            <th>Protein</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for food in food_list %}
+            <tr>
+              <td>{{ food.id }}</td>
+              <td>{{ food.name }}</td>
+              <td>{{ food.calories }}</td>
+              <td>{{ food.fats }}</td>
+              <td>{{ food.carbs }}</td>
+              <td>{{ food.protein }}</td>
+              <td>
+                <a href="{% url 'tracker:food-update' food.pk %}" class="btn btn-warning btn-sm">Update</a>
+              </td>
+              <td>
+                <a href="{% url 'tracker:food-delete' food.pk %}" class="btn btn-danger btn-sm">Delete</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="alert alert-info">There is no food.</p>
+    {% endif %}
+  </div>
 {% endblock %}

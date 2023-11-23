@@ -1,27 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>
-    Nutrition Tracker
-    <a href="{% url 'tracker:nutrition-tracker-create' %}">+</a>
-  </h2>
-  <ul>
-    {% for nutrition_tracker in nutritiontracker_list %}
-      <li>
-        <strong>{{ nutrition_tracker.food.name }}</strong> - {{ nutrition_tracker.serving_size }} servings
-        <br>
-        Date: {{ nutrition_tracker.date|date:"F d, Y H:i" }}
-        <br>
-        Meal Type: {{ nutrition_tracker.meal_type }}
-        <br>
-        User Notes: {{ nutrition_tracker.user_notes }}
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="container mt-4">
+    <h2 class="text-corale text-center">
+      Nutrition Tracker
+      <a href="{% url 'tracker:nutrition-tracker-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+    </h2>
 
-  {% if nutritiontracker_list.has_other_pages %}
-    {% block pagination %}
+    {% if nutritiontracker_list %}
+      <div class="list-group-item_tracker mt-3 p-3">
+        {% for nutrition_tracker in nutritiontracker_list %}
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1"><strong>{{ nutrition_tracker.food.name }}</strong></h5>
+            <small>Date: {{ nutrition_tracker.date|date:"F d, Y H:i" }}</small>
+          </div>
+          <p class="mb-1">Serving Size: {{ nutrition_tracker.serving_size }} servings</p>
+          <p class="mb-1">Meal Type: {{ nutrition_tracker.meal_type }}</p>
+          <p class="mb-1">User Notes: {{ nutrition_tracker.user_notes }}</p>
+        {% endfor %}
+      </div>
+
+      {% block pagination %}
         {% include "includes/pagination.html" %}
-    {% endblock %}
-  {% endif %}
+      {% endblock %}
+    {% else %}
+      <p class="alert alert-info">There are no nutrition entries.</p>
+    {% endif %}
+  </div>
 {% endblock %}
