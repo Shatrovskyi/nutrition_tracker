@@ -2,11 +2,11 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 from tracker.forms import (
-    MealPlanForm,
-    UserMainCreationForm, MealPlanTitleSearchForm, UserMainUsernameSearchForm, FoodNameSearchForm,
-
+    MealPlanTitleSearchForm,
+    UserMainUsernameSearchForm,
+    FoodNameSearchForm
 )
-from tracker.models import Food, MealPlan, NutritionTracker
+from tracker.models import Food, MealPlan
 
 MEAL_PLAN_URL = reverse("tracker:meal-plan-list")
 USER_URL = reverse("tracker:user-list")
@@ -42,7 +42,7 @@ class PrivatePageTest(TestCase):
         )
         self.client.force_login(self.user)
 
-    def test_retrieve_car_manufacture_driver_list(self):
+    def test_retrieve_home_user_food_meal_plan_tracker_list(self):
         res1 = self.client.get(MEAL_PLAN_URL)
         res2 = self.client.get(USER_URL)
         res3 = self.client.get(FOOD_URL)
@@ -151,7 +151,7 @@ class UserListTest(TestCase):
         self.assertContains(response, "testuser1")
         self.assertContains(response, "testuser2")
 
-    def test_driver_list_view_context_data(self):
+    def test_user_list_view_context_data(self):
         response = self.client.get(USER_URL)
         self.assertEqual(response.status_code, 200)
         self.assertIn("search_form", response.context)

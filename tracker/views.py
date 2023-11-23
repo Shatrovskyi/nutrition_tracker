@@ -23,14 +23,10 @@ def index(request):
     num_meal_plans = MealPlan.objects.count()
     num_foods = Food.objects.count()
 
-    num_visits = request.session.get("num_visits", 0)
-    request.session["num_visits"] = num_visits + 1
-
     context = {
         "num_users": num_users,
         "num_meal_plans": num_meal_plans,
         "num_foods": num_foods,
-        "num_visits": num_visits + 1,
     }
 
     return render(request, "tracker/index.html", context=context)
