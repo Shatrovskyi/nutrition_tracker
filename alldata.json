@@ -1,0 +1,1221 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add food",
+    "content_type": 7,
+    "codename": "add_food"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change food",
+    "content_type": 7,
+    "codename": "change_food"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete food",
+    "content_type": 7,
+    "codename": "delete_food"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view food",
+    "content_type": 7,
+    "codename": "view_food"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add nutrition tracker",
+    "content_type": 8,
+    "codename": "add_nutritiontracker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change nutrition tracker",
+    "content_type": 8,
+    "codename": "change_nutritiontracker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete nutrition tracker",
+    "content_type": 8,
+    "codename": "delete_nutritiontracker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view nutrition tracker",
+    "content_type": 8,
+    "codename": "view_nutritiontracker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add meal plan",
+    "content_type": 9,
+    "codename": "add_mealplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change meal plan",
+    "content_type": 9,
+    "codename": "change_mealplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete meal plan",
+    "content_type": 9,
+    "codename": "delete_mealplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view meal plan",
+    "content_type": 9,
+    "codename": "view_mealplan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "tracker",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "tracker",
+    "model": "food"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "tracker",
+    "model": "nutritiontracker"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "tracker",
+    "model": "mealplan"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pnqquro7ccr1gflzbsjkb4ppo3qu91hh",
+  "fields": {
+    "session_data": ".eJxVjDsOgzAQRO_iOrK8uyZ8yvScwfLaS3A-RsKQJsrdAxJF0kwx8-a9lfPrMrq1yOxSVJ0CUKffkn24S96XePP5Oukw5WVOrHdEH2vR_RTlcTnYP8Hoy7i9Q2QaCJCpJRQ2QizSWqJAxliM3GzZ4BnAUhxsy5awDtVgyEINFW7SvD7dK5W0FNXh5wtbrDwb:1r6Fqf:QXyfE-01D3_am9JAJ9D6HKVNvsR38Hsp_x4qn1M2kdY",
+    "expire_date": "2023-12-07T19:58:53.623Z"
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 1,
+  "fields": {
+    "name": "Apple",
+    "calories": 95.0,
+    "protein": 0.5,
+    "carbs": 25.0,
+    "fats": 0.3
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 2,
+  "fields": {
+    "name": "Banana",
+    "calories": 105.0,
+    "protein": 1.3,
+    "carbs": 27.0,
+    "fats": 0.4
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 3,
+  "fields": {
+    "name": "Salmon",
+    "calories": 206.0,
+    "protein": 22.0,
+    "carbs": 0.0,
+    "fats": 13.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 4,
+  "fields": {
+    "name": "Quinoa",
+    "calories": 120.0,
+    "protein": 4.0,
+    "carbs": 21.0,
+    "fats": 1.6
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 5,
+  "fields": {
+    "name": "Broccoli",
+    "calories": 55.0,
+    "protein": 3.7,
+    "carbs": 11.2,
+    "fats": 0.6
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 6,
+  "fields": {
+    "name": "Peanut Butter",
+    "calories": 94.0,
+    "protein": 3.8,
+    "carbs": 3.1,
+    "fats": 8.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 7,
+  "fields": {
+    "name": "Spinach",
+    "calories": 23.0,
+    "protein": 2.9,
+    "carbs": 3.6,
+    "fats": 0.4
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 8,
+  "fields": {
+    "name": "Sweet Potato",
+    "calories": 112.0,
+    "protein": 2.0,
+    "carbs": 26.0,
+    "fats": 0.2
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 9,
+  "fields": {
+    "name": "Oats",
+    "calories": 68.0,
+    "protein": 2.5,
+    "carbs": 12.0,
+    "fats": 1.4
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 10,
+  "fields": {
+    "name": "Greek Yogurt",
+    "calories": 59.0,
+    "protein": 10.0,
+    "carbs": 3.6,
+    "fats": 0.4
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 11,
+  "fields": {
+    "name": "Avocado",
+    "calories": 160.0,
+    "protein": 2.0,
+    "carbs": 8.5,
+    "fats": 14.7
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 12,
+  "fields": {
+    "name": "Salad Greens",
+    "calories": 10.0,
+    "protein": 1.0,
+    "carbs": 2.0,
+    "fats": 0.2
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 13,
+  "fields": {
+    "name": "Brown Rice",
+    "calories": 215.0,
+    "protein": 5.0,
+    "carbs": 45.0,
+    "fats": 1.6
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 14,
+  "fields": {
+    "name": "Eggs",
+    "calories": 68.0,
+    "protein": 6.0,
+    "carbs": 0.6,
+    "fats": 4.8
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 15,
+  "fields": {
+    "name": "Almonds",
+    "calories": 7.0,
+    "protein": 2.6,
+    "carbs": 2.6,
+    "fats": 0.6
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 16,
+  "fields": {
+    "name": "Cottage Cheese",
+    "calories": 220.0,
+    "protein": 28.0,
+    "carbs": 6.0,
+    "fats": 10.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 17,
+  "fields": {
+    "name": "Tuna",
+    "calories": 160.0,
+    "protein": 35.0,
+    "carbs": 0.0,
+    "fats": 1.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 18,
+  "fields": {
+    "name": "Whole Wheat Bread",
+    "calories": 69.0,
+    "protein": 3.6,
+    "carbs": 12.0,
+    "fats": 1.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 19,
+  "fields": {
+    "name": "Greek Salad",
+    "calories": 240.0,
+    "protein": 10.0,
+    "carbs": 10.0,
+    "fats": 18.0
+  }
+},
+{
+  "model": "tracker.food",
+  "pk": 20,
+  "fields": {
+    "name": "Yogurt Parfait",
+    "calories": 150.0,
+    "protein": 8.0,
+    "carbs": 25.0,
+    "fats": 2.5
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 1,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alice",
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "email": "alice@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.756Z",
+    "age": 28,
+    "weight": 63.5,
+    "height": 170.0,
+    "fitness_goals": "Weight Loss",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 2,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bob",
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bob@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.756Z",
+    "age": 35,
+    "weight": 81.6,
+    "height": 183.0,
+    "fitness_goals": "Muscle Gain",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 3,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chloe",
+    "first_name": "Chloe",
+    "last_name": "Davis",
+    "email": "chloe@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.757Z",
+    "age": 22,
+    "weight": 56.7,
+    "height": 162.0,
+    "fitness_goals": "Overall Fitness",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 4,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "daniel",
+    "first_name": "Daniel",
+    "last_name": "Rodriguez",
+    "email": "daniel@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.757Z",
+    "age": 30,
+    "weight": 72.7,
+    "height": 178.0,
+    "fitness_goals": "Strength Training",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 5,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emily",
+    "first_name": "Emily",
+    "last_name": "Turner",
+    "email": "emily@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.757Z",
+    "age": 25,
+    "weight": 68.0,
+    "height": 168.0,
+    "fitness_goals": "Cardiovascular Health",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 6,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "frank",
+    "first_name": "Frank",
+    "last_name": "Williams",
+    "email": "frank@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.758Z",
+    "age": 40,
+    "weight": 90.7,
+    "height": 188.0,
+    "fitness_goals": "Flexibility and Mobility",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 7,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "grace",
+    "first_name": "Grace",
+    "last_name": "Baker",
+    "email": "grace@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.759Z",
+    "age": 27,
+    "weight": 61.2,
+    "height": 165.0,
+    "fitness_goals": "Weight Maintenance",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 8,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "henry",
+    "first_name": "Henry",
+    "last_name": "Martinez",
+    "email": "henry@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.759Z",
+    "age": 32,
+    "weight": 77.1,
+    "height": 175.0,
+    "fitness_goals": "High-Intensity Training",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 9,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "iris",
+    "first_name": "Iris",
+    "last_name": "Lee",
+    "email": "iris@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.760Z",
+    "age": 23,
+    "weight": 54.4,
+    "height": 160.0,
+    "fitness_goals": "Flexibility and Yoga",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 10,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jack",
+    "first_name": "Jack",
+    "last_name": "Taylor",
+    "email": "jack@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:43:11.761Z",
+    "age": 29,
+    "weight": 70.3,
+    "height": 173.0,
+    "fitness_goals": "Balanced Fitness",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eQb8zqdvDcQNwONG3tnZwt$cftBPDwUBIoZP7oot2khBwXepDSPjiemEIPMe9tVjKQ=",
+    "last_login": "2023-11-23T19:55:27.597Z",
+    "is_superuser": false,
+    "username": "chloe1",
+    "first_name": "Chloe",
+    "last_name": "Dav",
+    "email": "chloe2@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-11-23T19:55:23.019Z",
+    "age": 33,
+    "weight": 99.0,
+    "height": 155.0,
+    "fitness_goals": "Overall Fitness",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 1,
+  "fields": {
+    "creator": 1,
+    "title": "Healthy Meal Plan 1",
+    "description": "A well-balanced meal plan for a healthy lifestyle",
+    "users": [
+      1,
+      2
+    ],
+    "foods": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 2,
+  "fields": {
+    "creator": 3,
+    "title": "Fitness Meal Plan 1",
+    "description": "Designed for strength training and muscle building",
+    "users": [
+      3,
+      4
+    ],
+    "foods": [
+      5,
+      4
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 3,
+  "fields": {
+    "creator": 5,
+    "title": "Vegan Meal Plan 1",
+    "description": "Plant-based meals for a cruelty-free diet",
+    "users": [
+      5,
+      6
+    ],
+    "foods": [
+      6,
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 4,
+  "fields": {
+    "creator": 7,
+    "title": "Weight Maintenance Plan",
+    "description": "Maintaining a healthy weight with balanced nutrition",
+    "users": [
+      7,
+      8
+    ],
+    "foods": [
+      10,
+      9
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 5,
+  "fields": {
+    "creator": 9,
+    "title": "Flexitarian Meal Plan",
+    "description": "Balancing plant-based and animal-based foods",
+    "users": [
+      9,
+      10
+    ],
+    "foods": [
+      1,
+      5,
+      3
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 6,
+  "fields": {
+    "creator": 2,
+    "title": "Protein-Packed Meal Plan",
+    "description": "High-protein meals for muscle recovery",
+    "users": [
+      2,
+      4,
+      6
+    ],
+    "foods": [
+      2,
+      4,
+      8
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 7,
+  "fields": {
+    "creator": 1,
+    "title": "Low-Carb Meal Plan",
+    "description": "Reducing carbohydrates for weight management",
+    "users": [
+      1,
+      3,
+      5
+    ],
+    "foods": [
+      9,
+      6,
+      3
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 8,
+  "fields": {
+    "creator": 7,
+    "title": "Gluten-Free Meal Plan",
+    "description": "Eliminating gluten for those with gluten sensitivity",
+    "users": [
+      7,
+      9
+    ],
+    "foods": [
+      10,
+      7
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 9,
+  "fields": {
+    "creator": 2,
+    "title": "High-Fiber Meal Plan",
+    "description": "Boosting fiber intake for digestive health",
+    "users": [
+      2,
+      8
+    ],
+    "foods": [
+      1,
+      5,
+      9
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 10,
+  "fields": {
+    "creator": 4,
+    "title": "Paleo Meal Plan",
+    "description": "Following a paleolithic diet with natural foods",
+    "users": [
+      4,
+      6,
+      10
+    ],
+    "foods": [
+      2,
+      6,
+      4,
+      8
+    ]
+  }
+},
+{
+  "model": "tracker.mealplan",
+  "pk": 11,
+  "fields": {
+    "creator": 7,
+    "title": "Fat Free",
+    "description": "GO GO GO",
+    "users": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "foods": [
+      11,
+      2,
+      5,
+      13,
+      16,
+      6,
+      3,
+      8,
+      17,
+      18,
+      20
+    ]
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "food": 1,
+    "date": "2023-11-23T12:00:00Z",
+    "serving_size": 1,
+    "meal_type": "Lunch",
+    "user_notes": "Enjoyed a delicious and nutritious meal"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "food": 2,
+    "date": "2023-11-24T08:30:00Z",
+    "serving_size": 2,
+    "meal_type": "Breakfast",
+    "user_notes": "Starting the day with a healthy meal"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "food": 3,
+    "date": "2023-11-25T19:00:00Z",
+    "serving_size": 1,
+    "meal_type": "Dinner",
+    "user_notes": "Perfect way to end the day"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "food": 4,
+    "date": "2023-11-26T15:45:00Z",
+    "serving_size": 1,
+    "meal_type": "Snack",
+    "user_notes": "Quick and healthy snack"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "food": 5,
+    "date": "2023-11-27T07:30:00Z",
+    "serving_size": 1,
+    "meal_type": "Breakfast",
+    "user_notes": "Fueling up for the day"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "food": 6,
+    "date": "2023-11-28T12:30:00Z",
+    "serving_size": 1,
+    "meal_type": "Lunch",
+    "user_notes": "Nutrient-rich lunch for energy"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "food": 7,
+    "date": "2023-11-29T18:15:00Z",
+    "serving_size": 1,
+    "meal_type": "Dinner",
+    "user_notes": "Balanced dinner for a good night's sleep"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 8,
+  "fields": {
+    "user": 8,
+    "food": 8,
+    "date": "2023-11-30T10:00:00Z",
+    "serving_size": 1,
+    "meal_type": "Snack",
+    "user_notes": "Mid-morning energy boost"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 9,
+  "fields": {
+    "user": 9,
+    "food": 9,
+    "date": "2023-12-01T14:45:00Z",
+    "serving_size": 1,
+    "meal_type": "Lunch",
+    "user_notes": "Enjoying a healthy and flavorful lunch"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 10,
+  "fields": {
+    "user": 10,
+    "food": 10,
+    "date": "2023-12-02T20:00:00Z",
+    "serving_size": 1,
+    "meal_type": "Dinner",
+    "user_notes": "Delicious and nutritious dinner choice"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 11,
+  "fields": {
+    "user": 3,
+    "food": 2,
+    "date": "2023-11-23T19:57:52.480Z",
+    "serving_size": 1231,
+    "meal_type": "brakfest",
+    "user_notes": "hjgjhghj"
+  }
+},
+{
+  "model": "tracker.nutritiontracker",
+  "pk": 12,
+  "fields": {
+    "user": 11,
+    "food": 1,
+    "date": "2023-11-23T19:58:37.708Z",
+    "serving_size": 123,
+    "meal_type": "breakfast",
+    "user_notes": "rtere"
+  }
+}
+]
