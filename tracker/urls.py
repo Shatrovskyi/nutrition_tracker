@@ -11,7 +11,6 @@ from .views import (
     MealPlanUpdateView,
     MealPlanDeleteView,
     UserCreateView,
-    UserUpdateView,
     UserDetailView,
     UserWeightUpdateView,
     UserDeleteView,
@@ -50,7 +49,6 @@ urlpatterns = [
     path("food/<int:pk>/update/", FoodUpdateView.as_view(), name="food-update"),
     path("food/<int:pk>/delete/", FoodDeleteView.as_view(), name="food-delete"),
     path("user/create/", UserCreateView.as_view(), name="user-create"),
-    path("user/<int:pk>/update/", UserUpdateView.as_view(), name="user-update"),
     path("user/<int:pk>/delete/", UserDeleteView.as_view(), name="user-delete"),
     path("user/<int:pk>/", UserDetailView.as_view(), name="user-detail"),
     path(

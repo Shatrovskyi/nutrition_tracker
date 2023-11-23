@@ -1,6 +1,5 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-
 from tracker.models import User, MealPlan, Food
 
 
@@ -29,6 +28,7 @@ class UserMainCreationForm(UserCreationForm):
             "age",
             "weight",
             "height",
+            "fitness_goals"
         )
 
 

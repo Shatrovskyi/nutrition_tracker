@@ -149,7 +149,7 @@ class UserListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-class UserCreateView(LoginRequiredMixin, generic.CreateView):
+class UserCreateView(generic.CreateView):
     model = User
     form_class = UserMainCreationForm
 
@@ -157,11 +157,6 @@ class UserCreateView(LoginRequiredMixin, generic.CreateView):
 class UserDetailView(LoginRequiredMixin, generic.DetailView):
     model = User
     queryset = User.objects.all().prefetch_related("meal_plans__foods")
-
-
-class UserUpdateView(LoginRequiredMixin, generic.UpdateView):
-    model = User
-    form_class = UserMainCreationForm
 
 
 class UserWeightUpdateView(LoginRequiredMixin, generic.UpdateView):

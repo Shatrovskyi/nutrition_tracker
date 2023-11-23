@@ -20,7 +20,7 @@
     {{ form|crispy }}
 
     <input type="submit" value="Login" class="btn btn-success mt-3" />
-    <input type="hidden" name="next" value="{{ next }}" />
+    <a href="{% url 'tracker:user-create' %}" class="btn btn-warning" style="margin-top: 15px;">Register</a>
   </form>
 </div>
 {% endblock %}

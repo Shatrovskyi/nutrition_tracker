@@ -23,7 +23,6 @@
             <th>Weight</th>
             <th>Height</th>
             <th>Age</th>
-            <th>Update</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -35,7 +34,6 @@
               <td>{{ user.weight }}</td>
               <td>{{ user.height }}</td>
               <td>{{ user.age }}</td>
-              <td><a href="{% url 'tracker:user-update' pk=user.id %}" class="btn btn-warning btn-sm">Update</a></td>
               <td><a href="{% url 'tracker:user-delete' pk=user.id %}" class="btn btn-danger btn-sm">Delete</a></td>
             </tr>
           {% endfor %}

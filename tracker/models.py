@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import AbstractUser
 
 
@@ -21,6 +22,9 @@ class User(AbstractUser):
     weight = models.FloatField(null=True, blank=True)
     height = models.FloatField(null=True, blank=True)
     fitness_goals = models.TextField(null=True, blank=True)
+
+    def get_absolute_url(self):
+        return reverse("tracker:user-detail", kwargs={"pk": self.pk})
 
     def __str__(self):
         return f"{self.username} ({self.first_name} {self.last_name})"
