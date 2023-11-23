@@ -11,7 +11,7 @@ from .forms import (
     UserMainUpdateWeightForm,
     FoodNameSearchForm,
     MealPlanTitleSearchForm,
-    MealPlanForm
+    MealPlanForm,
 )
 
 
@@ -45,18 +45,14 @@ class MealPlanListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(MealPlanListView, self).get_context_data(**kwargs)
         title = self.request.GET.get("title", "")
-        context["search_form"] = MealPlanTitleSearchForm(
-            initial={"title": title}
-        )
+        context["search_form"] = MealPlanTitleSearchForm(initial={"title": title})
         return context
 
     def get_queryset(self):
         queryset = self.model.objects.all()
         form = MealPlanTitleSearchForm(self.request.GET)
         if form.is_valid():
-            return queryset.filter(
-                title__icontains=form.cleaned_data["title"]
-            )
+            return queryset.filter(title__icontains=form.cleaned_data["title"])
         return queryset
 
 
@@ -104,18 +100,14 @@ class FoodListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(FoodListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["search_form"] = FoodNameSearchForm(
-            initial={"name": name}
-        )
+        context["search_form"] = FoodNameSearchForm(initial={"name": name})
         return context
 
     def get_queryset(self):
         queryset = self.model.objects.all()
         form = FoodNameSearchForm(self.request.GET)
         if form.is_valid():
-            return queryset.filter(
-                name__icontains=form.cleaned_data["name"]
-            )
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
         return queryset
 
 
@@ -153,9 +145,7 @@ class UserListView(LoginRequiredMixin, generic.ListView):
         queryset = self.model.objects.all()
         form = UserMainUsernameSearchForm(self.request.GET)
         if form.is_valid():
-            return queryset.filter(
-                username__icontains=form.cleaned_data["username"]
-            )
+            return queryset.filter(username__icontains=form.cleaned_data["username"])
         return queryset
 
 

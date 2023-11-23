@@ -28,7 +28,7 @@ class UserMainCreationForm(UserCreationForm):
             "email",
             "age",
             "weight",
-            "height"
+            "height",
         )
 
 

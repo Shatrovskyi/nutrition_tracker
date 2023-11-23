@@ -21,7 +21,7 @@ class UserAdmin(UserAdmin):
                         "weight",
                         "height",
                         "age",
-                        "fitness_goals"
+                        "fitness_goals",
                     )
                 },
             ),

@@ -42,8 +42,12 @@ class MealPlan(models.Model):
 
 
 class NutritionTracker(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="nutrition_trackers")
-    food = models.ForeignKey(Food, on_delete=models.CASCADE, related_name="nutrition_trackers")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="nutrition_trackers"
+    )
+    food = models.ForeignKey(
+        Food, on_delete=models.CASCADE, related_name="nutrition_trackers"
+    )
     date = models.DateTimeField(auto_now_add=True)
     serving_size = models.IntegerField()
     meal_type = models.CharField(max_length=255)
