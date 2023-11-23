@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -39,6 +40,7 @@ class MealPlanListView(LoginRequiredMixin, generic.ListView):
     model = MealPlan
     context_object_name = "meal_plan_list"
     template_name = "tracker/meal_plan_list.html"
+    paginate_by = 2
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(MealPlanListView, self).get_context_data(**kwargs)
@@ -97,7 +99,7 @@ class NutritionTrackerCreateView(LoginRequiredMixin, generic.CreateView):
 class FoodListView(LoginRequiredMixin, generic.ListView):
     model = Food
     template_name = "tracker/food_list.html"
-    paginate_by = 6
+    paginate_by = 10
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(FoodListView, self).get_context_data(**kwargs)
@@ -181,3 +183,13 @@ class UserWeightUpdateView(LoginRequiredMixin, generic.UpdateView):
 class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = User
     success_url = reverse_lazy("tracker:user-list")
+
+
+def meal_plan_add_user(request: HttpRequest, pk: int) -> HttpResponse:
+    MealPlan.objects.get(id=pk).users.add(request.user)
+    return redirect(f"/meal-plan/{pk}/")
+
+
+def meal_plan_delete_user(request: HttpRequest, pk: int) -> HttpResponse:
+    MealPlan.objects.get(id=pk).users.remove(request.user)
+    return redirect(f"/meal-plan/{pk}/")

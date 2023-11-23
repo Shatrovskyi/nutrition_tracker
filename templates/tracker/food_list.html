@@ -5,8 +5,13 @@
   <div class="container mt-4">
     <h1 class="mb-4 text-center">
       Food List
-      <a href="{% url 'tracker:food-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+      <a href="{% url 'tracker:food-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px; margin-bottom: 5px;">+</a>
     </h1>
+
+    <form action="" method="get" class="form-inline">
+      {{ search_form|crispy }}
+      <input type="submit" value="🔍" class="btn btn-success" style="margin-bottom: 14px; margin-left: 5px;">
+    </form>
 
     {% if food_list %}
       <table class="table table-bordered table-hover">

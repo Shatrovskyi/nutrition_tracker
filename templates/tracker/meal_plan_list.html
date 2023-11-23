@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
 
 {% block content %}
   <div class="container mt-4">
     <h2 class="text-corale text-center">
       Meal Plans
-      <a href="{% url 'tracker:meal-plan-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+      <a href="{% url 'tracker:meal-plan-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px; margin-bottom: 5px;">+</a>
     </h2>
+
+    <form action="" method="get" class="form-inline">
+      {{ search_form|crispy }}
+      <input type="submit" value="🔍" class="btn btn-success" style="margin-bottom: 14px; margin-left: 5px;">
+    </form>
 
     {% if meal_plan_list %}
       <div class="list-group">

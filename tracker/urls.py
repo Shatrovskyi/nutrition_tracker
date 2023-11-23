@@ -18,7 +18,9 @@ from .views import (
     FoodCreateView,
     FoodUpdateView,
     FoodDeleteView,
-    NutritionTrackerCreateView
+    NutritionTrackerCreateView,
+    meal_plan_add_user,
+    meal_plan_delete_user
 )
 
 
@@ -97,6 +99,16 @@ urlpatterns = [
         "nutrition_trackers/create/",
         NutritionTrackerCreateView.as_view(),
         name="nutrition-tracker-create"
+    ),
+    path(
+        "meal_plans/<int:pk>/add-user",
+        meal_plan_add_user,
+        name="meal-plan-add-user"
+    ),
+    path(
+        "meal_plans/<int:pk>/delete-user",
+        meal_plan_delete_user,
+        name="meal-plan-delete-user"
     )
 
 ]

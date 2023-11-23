@@ -5,7 +5,13 @@
   <div class="container mt-4">
     <div class="card list-group-item" style="font-size: 21px;">
       <div class="card-body">
-        <h1 class="card-text">{{ mealplan.title }}</h1>
+        <h1 class="card-text">{{ mealplan.title }}
+          {% if user not in mealplan.users.all %}
+            <a style="float: right" href="{% url 'tracker:meal-plan-add-user' pk=mealplan.id %}" class="btn btn-success">Assign user</a>
+          {% else %}
+            <a style="float: right" href="{% url 'tracker:meal-plan-delete-user' pk=mealplan.id %}" class="btn btn-danger">Delete user</a>
+          {% endif %}
+        </h1>
         <p class="card-text" >Description: {{ mealplan.description }}</p>
         <p class="card-text">Created by: <h5 class="text-corale">{{ mealplan.creator.username }}</h5></p>
       </div>

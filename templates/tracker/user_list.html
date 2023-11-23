@@ -1,11 +1,18 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
+
 
 {% block content %}
   <div class="container mt-4">
     <h1 class="text-corale text-center">
       User List
-      <a href="{% url 'tracker:user-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px;">+</a>
+      <a href="{% url 'tracker:user-create' %}" class="btn bg-success btn-sm ms-2" style="margin-left: 10px; margin-bottom: 5px;">+</a>
     </h1>
+
+    <form action="" method="get" class="form-inline">
+      {{ search_form|crispy }}
+      <input type="submit" value="🔍" class="btn btn-success" style="margin-bottom: 14px; margin-left: 5px;">
+    </form>
 
     {% if user_list %}
       <table class="table table-bordered table-hover">
