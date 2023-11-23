@@ -36,6 +36,8 @@ offering users a comprehensive tool to manage and follow their dietary routines.
   
     `python manage.py loaddata test_data.json`
 
+4) `python manage.py runsrver`
+
 - After loading data from the fixture you can use the following superuser to log in to the site:
   - Login: `admin`
   - Password: `admin`
