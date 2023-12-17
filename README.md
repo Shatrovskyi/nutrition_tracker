@@ -4,6 +4,9 @@
 This project constitutes an integral part of a fitness centre's digital ecosystem, empowering users to meticulously track their nutritional intake through personalized notes. It seamlessly integrates with a diverse range of meal plans, 
 offering users a comprehensive tool to manage and follow their dietary routines.
 
+### Check it out
+https://nutrition-tracker-z8km.onrender.com/
+
 ### Key Features:
 
 1) Nutrition Tracking with Notes: Users can log detailed notes on their daily nutritional intake, precisely capturing the specifics of each meal.
