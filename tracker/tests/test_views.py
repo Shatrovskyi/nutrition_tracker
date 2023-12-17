@@ -1,3 +1,4 @@
+import pytest
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
@@ -15,24 +16,23 @@ NUTRITION_TRACKER = reverse("tracker:nutrition-tracker-list")
 HOME_PAGE = reverse("tracker:index")
 
 
-class PublicPageTest(TestCase):
-    def test_login_required(self):
-        res1 = self.client.get(MEAL_PLAN_URL)
-        res2 = self.client.get(USER_URL)
-        res3 = self.client.get(FOOD_URL)
-        res4 = self.client.get(NUTRITION_TRACKER)
-        res5 = self.client.get(HOME_PAGE)
-
-        self.assertNotEqual(res1.status_code, 200)
-        self.assertNotEqual(res2.status_code, 200)
-        self.assertNotEqual(res3.status_code, 200)
-        self.assertNotEqual(res4.status_code, 200)
-        self.assertNotEqual(res5.status_code, 200)
+@pytest.mark.django_db
+@pytest.mark.parametrize(
+    "url",
+    [MEAL_PLAN_URL, USER_URL, FOOD_URL, HOME_PAGE, NUTRITION_TRACKER]
+)
+def test_public_page(client, url):
+    response = client.get(url)
+    assert response.status_code != 200
 
 
-class PrivatePageTest(TestCase):
-    def setUp(self):
-        self.user = get_user_model().objects.create_user(
+@pytest.mark.django_db
+@pytest.mark.parametrize(
+    "url",
+    [MEAL_PLAN_URL, USER_URL, FOOD_URL, HOME_PAGE, NUTRITION_TRACKER]
+)
+def test_private_page(client, url):
+    user = get_user_model().objects.create_user(
             username="testuser",
             password="testpassword",
             age=25,
@@ -40,20 +40,10 @@ class PrivatePageTest(TestCase):
             height=175.0,
             fitness_goals="Stay fit",
         )
-        self.client.force_login(self.user)
+    client.force_login(user)
 
-    def test_retrieve_home_user_food_meal_plan_tracker_list(self):
-        res1 = self.client.get(MEAL_PLAN_URL)
-        res2 = self.client.get(USER_URL)
-        res3 = self.client.get(FOOD_URL)
-        res4 = self.client.get(NUTRITION_TRACKER)
-        res5 = self.client.get(HOME_PAGE)
-
-        self.assertEqual(res1.status_code, 200)
-        self.assertEqual(res2.status_code, 200)
-        self.assertEqual(res3.status_code, 200)
-        self.assertEqual(res4.status_code, 200)
-        self.assertEqual(res5.status_code, 200)
+    response = client.get(url)
+    assert response.status_code == 200
 
 
 class MealPlanListTest(TestCase):
