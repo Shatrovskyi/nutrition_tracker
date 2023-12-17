@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import User, MealPlan, NutritionTracker, Food
@@ -17,7 +17,6 @@ from .forms import (
 
 @login_required
 def index(request):
-    """View function for the home page of the site."""
 
     num_users = User.objects.count()
     num_meal_plans = MealPlan.objects.count()
@@ -168,9 +167,9 @@ class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 def meal_plan_add_user(request: HttpRequest, pk: int) -> HttpResponse:
     MealPlan.objects.get(id=pk).users.add(request.user)
-    return redirect(f"/meal-plan/{pk}/")
+    return redirect(reverse("tracker:meal-plan-detail", args=[pk]))
 
 
 def meal_plan_delete_user(request: HttpRequest, pk: int) -> HttpResponse:
     MealPlan.objects.get(id=pk).users.remove(request.user)
-    return redirect(f"/meal-plan/{pk}/")
+    return redirect(reverse("tracker:meal-plan-detail", args=[pk]))
