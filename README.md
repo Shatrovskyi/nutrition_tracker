@@ -9,8 +9,8 @@ https://nutrition-tracker-z8km.onrender.com/
 
 #### Use these credentials:
 
-  - Login: `admin`
-  - Password: `admin`
+  - Login: `UserBIT`
+  - Password: `Bit11222`
 
 ### Key Features:
 
