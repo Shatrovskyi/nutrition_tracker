@@ -7,6 +7,11 @@ offering users a comprehensive tool to manage and follow their dietary routines.
 ### Check it out
 https://nutrition-tracker-z8km.onrender.com/
 
+#### Use these credentials:
+
+  - Login: `admin`
+  - Password: `admin`
+
 ### Key Features:
 
 1) Nutrition Tracking with Notes: Users can log detailed notes on their daily nutritional intake, precisely capturing the specifics of each meal.
@@ -32,14 +37,16 @@ https://nutrition-tracker-z8km.onrender.com/
     pip install -r requirements.txt
     ```
 
-### Set up database and make migrations
-1) `python manage.py makemigrations`
-2) `python manage.py migrate`
-3) Use the following command to load prepared data from fixture to test and debug:
-  
-    `python manage.py loaddata test_data.json`
+### Run project on your own Desktop:
 
-4) `python manage.py runserver`
+  Python 3.8+ is required 
+
+1) `python manage.py migrate`
+
+2) Use the following command to load prepared data from fixture to test and 
+debug: `python manage.py loaddata test_data.json`
+
+3) `python manage.py runserver`
 
 - After loading data from the fixture you can use the following superuser to log in to the site:
   - Login: `admin`
